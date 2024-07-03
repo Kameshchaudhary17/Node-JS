@@ -2,8 +2,11 @@ import express from "express";
 
 import {create} from "../controllers/create.js";
 
-const router = express.Router();
 
-router.post("/create", create);
 
-export default router;
+const createRouter = express.Router();
+
+createRouter.post("/create", create);
+
+
+export default createRouter;
