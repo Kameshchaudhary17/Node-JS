@@ -6,6 +6,8 @@ import createRouter from "./routers/createRoute.js"
 import deleteRouter from "./routers/deleteRoute.js"
 import readRouter from "./routers/readRoute.js"
 import updateRouter from "./routers/updateRoute.js"
+import registerRouter from "./routers/registerRoute.js"
+import loginRouter from "./routers/loginRoute.js"
 
 import dotenv from "dotenv";
 dotenv.config()
@@ -18,6 +20,8 @@ app.use('/', createRouter)
 app.use('/', deleteRouter)
 app.use('/', readRouter)
 app.use('/', updateRouter)
+app.use('/', registerRouter)
+app.use('/', loginRouter)
 
 
 app.get("/",(req,res)=>{
