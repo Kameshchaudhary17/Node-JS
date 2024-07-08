@@ -5,6 +5,7 @@ export const login = (req,res)=>{
 
 
     const {email, password} = req.body;
+    console.log(req.body);
 
     db.query(sql, [email,password], (err, results) => {
         if (err) return res.status(500).send(err);
@@ -14,7 +15,7 @@ export const login = (req,res)=>{
 
         if (password !== user.password) {
             return res.status(401).send({ message: "Invalid credentials" });
-        }
+        } 
         
         // Successful login, you can send a token or user info here
         return res.status(200).send({ message: "Login successful", user });

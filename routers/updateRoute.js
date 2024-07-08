@@ -4,7 +4,7 @@ import {update} from "../controllers/update.js";
 
 const updateRouter = express.Router();
 
-updateRouter.put("/update", update)
+updateRouter.post("/update", update)
 
 export default updateRouter;
 
